@@ -1,6 +1,6 @@
-package com.stschool.java.basics;
+package com.stschool.java.fundamentals;
 
-public class HelloWorld {
+public class MyFirstJavaClass {
     public static void main(String[] args) {
         System.out.println("Hello World");
     }
