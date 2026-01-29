@@ -1,17 +1,14 @@
-package com.stschool.java.fundamentals;
+package com.stschool.java.programs.level1;
 
 import java.util.Scanner;
 
-public class EvenNumbers {
+public class Print1ToN {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int num = sc.nextInt();
 
         for(int i = 1; i <= num; i++) {
-            if(i % 2 == 0) {
-                System.out.print(i + " ");
-            }
+            System.out.print(i + " ");
         }
     }
 }
