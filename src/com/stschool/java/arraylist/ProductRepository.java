@@ -28,6 +28,7 @@ public class ProductRepository implements ProductRepositoryInterface{
         for(Product product : products) {
             if(product.getId().equals(id)) {
                 productById = product;
+                break;
             }
         }
         return productById;
@@ -71,5 +72,28 @@ public class ProductRepository implements ProductRepositoryInterface{
 
         Product deleteProduct = findById(id);
         return products.remove(deleteProduct);
+    }
+
+    @Override
+    public void displayProduct(Product product) throws ProductNotFoundException {
+
+        if(findById(product.getId()) == null) {
+            throw new ProductNotFoundException("Product doesn't exist");
+        }
+
+        Product productById = findById(product.getId());
+
+        System.out.println("---------------------------------------");
+        System.out.println("Product Id: " + productById.getId());
+        System.out.println("Product Name: " + productById.getName());
+        System.out.println("Product Price: " + productById.getPrice());
+        System.out.println("----------------------------------------");
+    }
+
+    @Override
+    public void displayAllProducts() {
+        for(Product product : products) {
+            displayProduct(product);
+        }
     }
 }
