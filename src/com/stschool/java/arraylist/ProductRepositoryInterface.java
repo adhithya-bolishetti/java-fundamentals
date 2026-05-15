@@ -9,4 +9,6 @@ public interface ProductRepositoryInterface {
     Product update(Product product) throws ProductNotFoundException;
     boolean delete(Product product) throws ProductNotFoundException;
     boolean deleteById(String id) throws ProductNotFoundException;
+    void displayProduct(Product product) throws ProductNotFoundException;
+    void displayAllProducts();
 }
