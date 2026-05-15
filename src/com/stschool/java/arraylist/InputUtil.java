@@ -11,9 +11,14 @@ public class InputUtil {
         return scanner.nextInt();
     }
 
+    public static char getChar(String msg) {
+        System.out.println(msg);
+        return scanner.next().charAt(0);
+    }
+
     public static String getString(String msg) {
         System.out.println(msg);
-        return scanner.nextLine();
+        return scanner.next();
     }
 
     public static double getDouble(String msg) {
